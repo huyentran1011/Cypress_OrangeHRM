@@ -1,0 +1,105 @@
+describe('Login and search employee',() => {
+    it('Login and take update my account', () =>{
+        cy.visit('http://localhost:86/orangehrm5/web/index.php/auth/login')
+        cy.get('#app [name="username"]').click();
+        cy.get('#app [name="username"]').type('anna1011');
+        cy.get('#app [name="password"]').click();
+        cy.get('#app [name="password"]').clear();
+        cy.get('#app [name="password"]').type('Annatran1011@X');
+        cy.get('#app button.oxd-button').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/pim/viewMyDetails"]').click();
+        cy.get('#app [name="lastName"]').click();
+        cy.get('#app [name="lastName"]').clear();
+        cy.get('#app [name="lastName"]').type('Tran');
+        cy.get('#app div:nth-child(2) > div:nth-child(2) > div.oxd-radio-wrapper > label').click();
+        cy.get('#app input[value="2"]').check();
+        cy.get('#app button.orangehrm-left-space').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/dashboard/index"] span.oxd-text').click();
+        cy.get('#app button.orangehrm-attendance-card-action i.oxd-icon').click();
+        cy.get('#app i.bi-calendar').click();
+        cy.get('#app textarea.oxd-textarea').click();
+        cy.get('#app textarea.oxd-textarea').type('Testing');
+        cy.get('#app button.oxd-button').click();
+        cy.get('#app textarea.oxd-textarea').click();
+        cy.get('#app textarea.oxd-textarea').click();
+        cy.get('#app textarea.oxd-textarea').type('Time out');
+        cy.get('#app button.oxd-button').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/leave/viewLeaveModule"]').click();
+    })
+
+    it('Login, search employee and edit infomation', () =>{
+        cy.visit('http://localhost:86/orangehrm5/web/index.php/auth/login')
+        cy.get('#app [name="username"]').click();
+        cy.get('#app [name="username"]').type('automationfc');
+        cy.get('#app [name="password"]').click();
+        cy.get('#app [name="password"]').type('orangehrm5@X');
+        cy.get('#app button.oxd-button').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/pim/viewPimModule"]').click();
+        cy.get('#app div:nth-child(6) div.oxd-select-text--after i.oxd-icon').click();
+        cy.get('#app button.orangehrm-left-space').click();
+        cy.get('#app div:nth-child(1) > div.oxd-table-row > div:nth-child(9) > div.oxd-table-cell-actions > button:nth-child(2) > i.oxd-icon').click();
+        cy.get('#app div:nth-child(2) > div.oxd-input-group > div:nth-child(2) > div.oxd-date-wrapper > div.oxd-date-input > i.oxd-icon').click();
+        cy.get('#app input.oxd-input--focus').type('2028-10-10');
+        cy.get('#app form.oxd-form').click();
+        cy.get('#app div:nth-child(1) > div.oxd-input-group > div:nth-child(2) > div.oxd-select-wrapper > div.oxd-select-text > div.oxd-select-text--after > i.oxd-icon').click();
+        cy.get('#app div:nth-child(2) > div.oxd-input-group > div:nth-child(2) > div.oxd-select-wrapper > div.oxd-select-text > div.oxd-select-text--after > i.oxd-icon').click();
+        cy.get('#app div:nth-child(2) > div.oxd-input-group > div:nth-child(2) > div.oxd-select-wrapper > div.oxd-select-text > div.oxd-select-text--after > i.oxd-icon').click();
+        cy.get('#app div:nth-child(1) > div.oxd-input-group > div:nth-child(2) > div.oxd-date-wrapper > div.oxd-date-input > input.oxd-input').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('1988-09-09');
+        cy.get('#app form.oxd-form > div:nth-child(5) > div:nth-child(1)').click();
+        cy.get('#app div:nth-child(2) > div:nth-child(2) > div.oxd-radio-wrapper > label').click();
+        cy.get('#app input[value="2"]').check();
+        cy.get('#app button.orangehrm-left-space').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/pim/contactDetails/empNumber/51"]').click();
+        cy.get('#app div:nth-child(5) input.oxd-input').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('32505');
+        cy.get('#app input.oxd-input--focus').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('christina123@gmail.com');
+        cy.get('#app button.orangehrm-left-space').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/pim/viewEmergencyContacts/empNumber/51"]').click();
+        cy.get('#app div:nth-child(1) > div.orangehrm-action-header > button.oxd-button').click();
+        cy.get('#app input.oxd-input--focus').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('Lisa');
+        cy.get('#app input.oxd-input--focus').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('Mother');
+        cy.get('#app input.oxd-input--focus').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('(899) 578 8907');
+        cy.get('#app button.orangehrm-left-space').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/pim/viewDependents/empNumber/51"]').click();
+        cy.get('#app div:nth-child(1) > div.orangehrm-action-header > button.oxd-button').click();
+        cy.get('#app input.oxd-input--focus').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('Lisa');
+        cy.get('#app i.bi-caret-up-fill').click();
+        cy.get('#app div:nth-child(3) > div.oxd-input-group > div:nth-child(2) > input.oxd-input').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('Mother');
+        cy.get('#app input.oxd-input--focus').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('1959-07-09');
+        cy.get('#app div:nth-child(2) > div.orangehrm-full-width-grid').click();
+        cy.get('#app div.orangehrm-edit-employee-content > div:nth-child(1)').click();
+        cy.get('#app button.orangehrm-left-space').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/pim/viewJobDetails/empNumber/51"]').click();
+        cy.get('#app div:nth-child(5) i.oxd-icon').click();
+        cy.get('#app button.orangehrm-left-space').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/pim/viewSalaryList/empNumber/51"]').click();
+        cy.get('#app div:nth-child(1) > div.orangehrm-action-header > button.oxd-button').click();
+        cy.get('#app input.oxd-input--focus').click();
+        cy.get('#app input.oxd-input--focus').clear();
+        cy.get('#app input.oxd-input--focus').type('6000');
+        cy.get('#app i.bi-caret-up-fill').click();
+        cy.get('#app div:nth-child(3) > div.oxd-input-group > div:nth-child(2) > div.oxd-select-wrapper > div.oxd-select-text > div.oxd-select-text-input').click();
+        cy.get('#app div:nth-child(4) div.oxd-select-text--after i.oxd-icon').click();
+        cy.get('#app button.orangehrm-left-space').click();
+        cy.get('#app button.oxd-button--ghost').click();
+        cy.get('#app span.oxd-userdropdown-tab').click();
+        cy.get('#app a[href="/orangehrm5/web/index.php/auth/logout"]').click();
+    })
+})

@@ -1,0 +1,26 @@
+{
+  "name": "project02_cypresswithtypescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node run-tests.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cypress": "^15.3.0",
+    "typecript": "^0.0.1-security",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "open": "^10.2.0",
+    "rimraf": "^6.0.1"
+  }
+}

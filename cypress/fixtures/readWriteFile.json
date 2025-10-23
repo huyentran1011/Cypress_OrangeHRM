@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "name": "Madison McColden",
+      "email": "madison_Mac364@gmail.com",
+      "role": "GM"
+    },
+    {
+      "name": "Tony Anderson",
+      "email": "tony_anderson@gmail.com",
+      "role": "GM"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post Title 1",
+      "body": "This is the body of post 1"
+    },
+    {
+      "id": 2,
+      "title": "Post Title 2",
+      "body": "This is the body of post 2"
+    }
+  ]
+}
