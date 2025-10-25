@@ -20,6 +20,7 @@
     "cypress-downloadfile": "^1.2.4",
     "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^4.0.2",
+    "mysql2": "^3.15.3",
     "open": "^10.2.0",
     "rimraf": "^6.0.1"
   }

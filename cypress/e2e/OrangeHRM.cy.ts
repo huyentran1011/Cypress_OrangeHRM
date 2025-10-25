@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Test Suite - Authentication', () => {
   it('Verify Login page', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 

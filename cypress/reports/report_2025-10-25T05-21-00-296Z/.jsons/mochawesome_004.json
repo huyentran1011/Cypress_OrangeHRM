@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-25T05:21:36.551Z",
+    "end": "2025-10-25T05:21:39.255Z",
+    "duration": 2704,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b0440468-443c-453a-b61c-2d6e7b19f8e8",
+      "title": "",
+      "fullFile": "cypress/e2e/demo_uploadFile.cy.ts",
+      "file": "cypress/e2e/demo_uploadFile.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8a746c7-cce8-4d77-97bc-6ebde2c46cc8",
+          "title": "Upload file demo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Upload single file",
+              "fullTitle": "Upload file demo Upload single file",
+              "timedOut": null,
+              "duration": 963,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/demo_uploadFile.cy.ts\"\n}",
+              "code": "// Access website\ncy.visit('https://filebin.net/');\n// Upload file\ncy.get('#fileField').attachFile(uploadFile1);\n// Verify files are uploaded successfully\ncy.contains(uploadFile1).should('be.visible');",
+              "err": {},
+              "uuid": "3e21e721-8adc-4f5c-95b1-5ca44bb50b21",
+              "parentUUID": "b8a746c7-cce8-4d77-97bc-6ebde2c46cc8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Upload multiple files",
+              "fullTitle": "Upload file demo Upload multiple files",
+              "timedOut": null,
+              "duration": 515,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/demo_uploadFile.cy.ts\"\n}",
+              "code": "// Access website\ncy.visit('https://filebin.net/');\n// Upload file\ncy.get('#fileField').attachFile([uploadFile2, uploadFile3]);\n// Verify files are uploaded successfully\ncy.contains(uploadFile2).should('be.visible');\ncy.contains(uploadFile3).should('be.visible');",
+              "err": {},
+              "uuid": "dd1ec6a7-0c43-4027-8375-5c8ffc663c51",
+              "parentUUID": "b8a746c7-cce8-4d77-97bc-6ebde2c46cc8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e21e721-8adc-4f5c-95b1-5ca44bb50b21",
+            "dd1ec6a7-0c43-4027-8375-5c8ffc663c51"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1478,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/report_2025-10-25T05-21-00-296Z/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

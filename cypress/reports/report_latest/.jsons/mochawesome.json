@@ -1,0 +1,202 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-25T05:21:03.358Z",
+    "end": "2025-10-25T05:21:11.428Z",
+    "duration": 8070,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "207f6d35-8086-4700-9685-d5868f956932",
+      "title": "",
+      "fullFile": "cypress/e2e/OrangeHRM.cy.ts",
+      "file": "cypress/e2e/OrangeHRM.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a918e2ec-7527-4db5-abca-739e05e8d965",
+          "title": "Test Suite - Authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Login page",
+              "fullTitle": "Test Suite - Authentication Verify Login page",
+              "timedOut": null,
+              "duration": 859,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n}",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\n// Verify Logo\ncy.get('.orangehrm-login-branding').should('be.visible')\n    .and('have.css', 'width', '384px')\n    .and('have.css', 'max-width', '520px')\n    .and('have.css', 'background-color', 'rgb(255, 255, 255)')\n    .and('have.css', 'text-align', 'center');\n// Verify Login header\ncy.get('.oxd-text--h5').should('have.text', 'Login')\n    .and('have.css', 'text-align', 'center')\n    .and('have.css', 'font-weight', '800');\n// Verify Username label\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-input-group__label-wrapper > .oxd-label')\n    .should('have.text', 'Username')\n    .and('have.css', 'font-weight', '600')\n    .and('have.css', 'font-size', '12px')\n    .and('have.css', 'color', 'rgb(100, 114, 140)');\n// Verify Username textbox\ncy.get('[name=\"username\"]').should('be.visible')\n    .and('have.attr', 'placeholder', 'Username');\n// Verify Password label\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-input-group__label-wrapper > .oxd-label')\n    .should('have.text', 'Password')\n    .and('have.css', 'font-weight', '600')\n    .and('have.css', 'font-size', '12px')\n    .and('have.css', 'color', 'rgb(100, 114, 140)');\n// Verify Password textbox\ncy.get('[name=\"password\"]').should('be.visible')\n    .and('have.attr', 'placeholder', 'Password');\n// Verify Login button\ncy.get('.oxd-button').should('be.enabled')\n    .and('contain', 'Login')\n    .and('have.css', 'color', 'rgb(255, 255, 255)')\n    .and('have.css', 'background-color', 'rgb(255, 123, 29)');",
+              "err": {},
+              "uuid": "75e0dd93-e2b8-48dc-b103-3db40447c8ba",
+              "parentUUID": "a918e2ec-7527-4db5-abca-739e05e8d965",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Fail with Username and Password are null",
+              "fullTitle": "Test Suite - Authentication Login Fail with Username and Password are null",
+              "timedOut": null,
+              "duration": 678,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n}",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/login');\n// Verify Username textbox\ncy.get('[name=\"username\"]').should('have.css', 'border-color', 'rgb(235, 9, 16)');\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-text').should('have.text', 'Required')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '12px');\n// Verify Password textbox\ncy.get('[name=\"password\"]').should('have.css', 'border-color', 'rgb(235, 9, 16)');\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-text').should('have.text', 'Required')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '12px');",
+              "err": {},
+              "uuid": "f830b943-f114-45b0-a6fe-fbbb3815c8d0",
+              "parentUUID": "a918e2ec-7527-4db5-abca-739e05e8d965",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Fail with Password are null",
+              "fullTitle": "Test Suite - Authentication Login Fail with Password are null",
+              "timedOut": null,
+              "duration": 869,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n}",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('[name=\"username\"]').type('Admin');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/login');\n// Verify Username textbox\ncy.get('[name=\"username\"]').should('have.css', 'border-color', 'rgb(232, 234, 239)');\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-text').should('not.exist');\n// Veirify Password textbox\ncy.get('[name=\"password\"]').should('have.css', 'border-color', 'rgb(235, 9, 16)');\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-text').should('have.text', 'Required')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '12px');",
+              "err": {},
+              "uuid": "ce1f57b4-c181-48d9-bb3b-3c5e0e559a4d",
+              "parentUUID": "a918e2ec-7527-4db5-abca-739e05e8d965",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Fail with Username are null",
+              "fullTitle": "Test Suite - Authentication Login Fail with Username are null",
+              "timedOut": null,
+              "duration": 767,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n}",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/login');\n// Verify Username textbox\ncy.get('[name=\"username\"]').should('have.css', 'border-color', 'rgb(235, 9, 16)');\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-text').should('have.text', 'Required')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '12px');\n// Veirify Password textbox\ncy.get('[name=\"password\"]').should('have.css', 'border-color', 'rgb(232, 234, 239)');\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-text').should('not.exist');",
+              "err": {},
+              "uuid": "d136e52d-9285-42ed-90f3-abaf3ea724a6",
+              "parentUUID": "a918e2ec-7527-4db5-abca-739e05e8d965",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Fail with Username and Password are invalid ",
+              "fullTitle": "Test Suite - Authentication Login Fail with Username and Password are invalid ",
+              "timedOut": null,
+              "duration": 1230,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n}",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('[name=\"username\"]').type('abc');\ncy.get('[name=\"password\"]').type('abc123');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/login');\n// Verify error message\ncy.get('.oxd-alert-content-text').should('have.text', 'Invalid credentials')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '14px');",
+              "err": {},
+              "uuid": "bd782905-54dd-4ca5-9734-330228ba76ce",
+              "parentUUID": "a918e2ec-7527-4db5-abca-739e05e8d965",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Success",
+              "fullTitle": "Test Suite - Authentication Login Success",
+              "timedOut": null,
+              "duration": 2748,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n}",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('[name=\"username\"]').type('Admin');\ncy.get('[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/dashboard');\ncy.contains('PIM').click();\ncy.url().should('include', '/pim');\ncy.get(':nth-child(2) > .oxd-input').type('76803');\ncy.get('.oxd-form-actions > .oxd-button--secondary').click();",
+              "err": {},
+              "uuid": "446295e9-c3d1-4806-8166-683fee11a48e",
+              "parentUUID": "a918e2ec-7527-4db5-abca-739e05e8d965",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "75e0dd93-e2b8-48dc-b103-3db40447c8ba",
+            "f830b943-f114-45b0-a6fe-fbbb3815c8d0",
+            "ce1f57b4-c181-48d9-bb3b-3c5e0e559a4d",
+            "d136e52d-9285-42ed-90f3-abaf3ea724a6",
+            "bd782905-54dd-4ca5-9734-330228ba76ce",
+            "446295e9-c3d1-4806-8166-683fee11a48e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7151,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/report_2025-10-25T05-21-00-296Z/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

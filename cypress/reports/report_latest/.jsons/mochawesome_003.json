@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-25T05:21:34.928Z",
+    "end": "2025-10-25T05:21:34.967Z",
+    "duration": 39,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "096d2e8a-5993-45df-aa1c-44bc14ea31d3",
+      "title": "",
+      "fullFile": "cypress/e2e/demo_databaseTest.cy.ts",
+      "file": "cypress/e2e/demo_databaseTest.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7bd5976b-d2ba-4542-a26f-47d75d820d71",
+          "title": "Query and verify database",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify data is existed in the database",
+              "fullTitle": "Query and verify database Verify data is existed in the database",
+              "timedOut": null,
+              "duration": 29,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/demo_databaseTest.cy.ts\"\n}",
+              "code": "const sqlQuery = \"SELECT * FROM hs_hr_employee WHERE emp_lastname = 'Tran' AND emp_firstname = 'Huyen'\";\ncy.task('queryDatabase', { query: sqlQuery }, { timeout: 20000 }).then((results) => {\n    // Print results to the Cypress log\n    cy.log('Database query results:', JSON.stringify(results));\n    // Assert that at least one record is returned\n    expect(results).to.have.length.greaterThan(0);\n    // Assert email is correct\n    expect(results[0].emp_work_email).to.be.equal('annatran281288@gmail.com');\n    expect(results[0].employee_id).to.be.equal('0001');\n});",
+              "err": {},
+              "uuid": "22c62393-c260-460d-b30a-60912726a3c3",
+              "parentUUID": "7bd5976b-d2ba-4542-a26f-47d75d820d71",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "22c62393-c260-460d-b30a-60912726a3c3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/report_2025-10-25T05-21-00-296Z/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

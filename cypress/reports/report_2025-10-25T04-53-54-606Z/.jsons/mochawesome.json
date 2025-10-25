@@ -1,0 +1,226 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 0,
+    "pending": 0,
+    "failures": 6,
+    "start": "2025-10-25T04:53:57.922Z",
+    "end": "2025-10-25T04:56:24.859Z",
+    "duration": 146937,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ca9ddcaa-d289-46b3-a6b8-e72602c104bb",
+      "title": "",
+      "fullFile": "cypress/e2e/OrangeHRM.cy.ts",
+      "file": "cypress/e2e/OrangeHRM.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fa6123ed-3c25-4b06-95d3-3b7257f932da",
+          "title": "Test Suite - Authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Login page",
+              "fullTitle": "Test Suite - Authentication Verify Login page",
+              "timedOut": null,
+              "duration": 33675,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/OrangeHRM.cy.ts/Test Suite - Authentication -- Verify Login page (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\n// Verify Logo\ncy.get('.orangehrm-login-branding').should('be.visible')\n    .and('have.css', 'width', '384px')\n    .and('have.css', 'max-width', '520px')\n    .and('have.css', 'background-color', 'rgb(255, 255, 255)')\n    .and('have.css', 'text-align', 'center');\n// Verify Login header\ncy.get('.oxd-text--h5').should('have.text', 'Login')\n    .and('have.css', 'text-align', 'center')\n    .and('have.css', 'font-weight', '800');\n// Verify Username label\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-input-group__label-wrapper > .oxd-label')\n    .should('have.text', 'Username')\n    .and('have.css', 'font-weight', '600')\n    .and('have.css', 'font-size', '12px')\n    .and('have.css', 'color', 'rgb(100, 114, 140)');\n// Verify Username textbox\ncy.get('[name=\"username\"]').should('be.visible')\n    .and('have.attr', 'placeholder', 'Username');\n// Verify Password label\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-input-group__label-wrapper > .oxd-label')\n    .should('have.text', 'Password')\n    .and('have.css', 'font-weight', '600')\n    .and('have.css', 'font-size', '12px')\n    .and('have.css', 'color', 'rgb(100, 114, 140)');\n// Verify Password textbox\ncy.get('[name=\"password\"]').should('be.visible')\n    .and('have.attr', 'placeholder', 'Password');\n// Verify Login button\ncy.get('.oxd-button').should('be.enabled')\n    .and('contain', 'Login')\n    .and('have.css', 'color', 'rgb(255, 255, 255)')\n    .and('have.css', 'background-color', 'rgb(255, 123, 29)');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.orangehrm-login-branding`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.orangehrm-login-branding`, but never found it.\n    at Context.eval (webpack://project02_cypresswithtypescript/./cypress/e2e/OrangeHRM.cy.ts:6:40)",
+                "diff": null
+              },
+              "uuid": "83dd80b4-8428-4cf7-80b1-2bb545075314",
+              "parentUUID": "fa6123ed-3c25-4b06-95d3-3b7257f932da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Fail with Username and Password are null",
+              "fullTitle": "Test Suite - Authentication Login Fail with Username and Password are null",
+              "timedOut": null,
+              "duration": 18250,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/OrangeHRM.cy.ts/Test Suite - Authentication -- Login Fail with Username and Password are null (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/login');\n// Verify Username textbox\ncy.get('[name=\"username\"]').should('have.css', 'border-color', 'rgb(235, 9, 16)');\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-text').should('have.text', 'Required')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '12px');\n// Verify Password textbox\ncy.get('[name=\"password\"]').should('have.css', 'border-color', 'rgb(235, 9, 16)');\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-text').should('have.text', 'Required')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '12px');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `button[type=\"submit\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `button[type=\"submit\"]`, but never found it.\n    at Context.eval (webpack://project02_cypresswithtypescript/./cypress/e2e/OrangeHRM.cy.ts:50:7)",
+                "diff": null
+              },
+              "uuid": "22837921-9383-4fe4-b221-4ad72fc3e615",
+              "parentUUID": "fa6123ed-3c25-4b06-95d3-3b7257f932da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Fail with Password are null",
+              "fullTitle": "Test Suite - Authentication Login Fail with Password are null",
+              "timedOut": null,
+              "duration": 17719,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/OrangeHRM.cy.ts/Test Suite - Authentication -- Login Fail with Password are null (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('[name=\"username\"]').type('Admin');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/login');\n// Verify Username textbox\ncy.get('[name=\"username\"]').should('have.css', 'border-color', 'rgb(232, 234, 239)');\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-text').should('not.exist');\n// Veirify Password textbox\ncy.get('[name=\"password\"]').should('have.css', 'border-color', 'rgb(235, 9, 16)');\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-text').should('have.text', 'Required')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '12px');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[name=\"username\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[name=\"username\"]`, but never found it.\n    at Context.eval (webpack://project02_cypresswithtypescript/./cypress/e2e/OrangeHRM.cy.ts:68:7)",
+                "diff": null
+              },
+              "uuid": "f352f5ec-8823-4b1e-aa27-4e14b549ce8c",
+              "parentUUID": "fa6123ed-3c25-4b06-95d3-3b7257f932da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Fail with Username are null",
+              "fullTitle": "Test Suite - Authentication Login Fail with Username are null",
+              "timedOut": null,
+              "duration": 21720,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/OrangeHRM.cy.ts/Test Suite - Authentication -- Login Fail with Username are null (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/login');\n// Verify Username textbox\ncy.get('[name=\"username\"]').should('have.css', 'border-color', 'rgb(235, 9, 16)');\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-text').should('have.text', 'Required')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '12px');\n// Veirify Password textbox\ncy.get('[name=\"password\"]').should('have.css', 'border-color', 'rgb(232, 234, 239)');\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-text').should('not.exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[name=\"password\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[name=\"password\"]`, but never found it.\n    at Context.eval (webpack://project02_cypresswithtypescript/./cypress/e2e/OrangeHRM.cy.ts:85:7)",
+                "diff": null
+              },
+              "uuid": "30a7461d-cc8c-409c-bc34-306921e39e97",
+              "parentUUID": "fa6123ed-3c25-4b06-95d3-3b7257f932da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Fail with Username and Password are invalid ",
+              "fullTitle": "Test Suite - Authentication Login Fail with Username and Password are invalid ",
+              "timedOut": null,
+              "duration": 20167,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/OrangeHRM.cy.ts/Test Suite - Authentication -- Login Fail with Username and Password are invalid (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('[name=\"username\"]').type('abc');\ncy.get('[name=\"password\"]').type('abc123');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/login');\n// Verify error message\ncy.get('.oxd-alert-content-text').should('have.text', 'Invalid credentials')\n    .and('have.css', 'color', 'rgb(235, 9, 16)')\n    .and('have.css', 'font-size', '14px');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[name=\"username\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[name=\"username\"]`, but never found it.\n    at Context.eval (webpack://project02_cypresswithtypescript/./cypress/e2e/OrangeHRM.cy.ts:102:7)",
+                "diff": null
+              },
+              "uuid": "02bd9879-05a1-42d5-b54d-49db6a1a4708",
+              "parentUUID": "fa6123ed-3c25-4b06-95d3-3b7257f932da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Success",
+              "fullTitle": "Test Suite - Authentication Login Success",
+              "timedOut": null,
+              "duration": 18310,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/OrangeHRM.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/OrangeHRM.cy.ts/Test Suite - Authentication -- Login Success (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('[name=\"username\"]').type('Admin');\ncy.get('[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/dashboard');\ncy.contains('PIM').click();\ncy.url().should('include', '/pim');\ncy.get(':nth-child(2) > .oxd-input').type('76803');\ncy.get('.oxd-form-actions > .oxd-button--secondary').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[name=\"username\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[name=\"username\"]`, but never found it.\n    at Context.eval (webpack://project02_cypresswithtypescript/./cypress/e2e/OrangeHRM.cy.ts:117:7)",
+                "diff": null
+              },
+              "uuid": "4ef2513d-8fae-4d63-ac29-2f020911be41",
+              "parentUUID": "fa6123ed-3c25-4b06-95d3-3b7257f932da",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "83dd80b4-8428-4cf7-80b1-2bb545075314",
+            "22837921-9383-4fe4-b221-4ad72fc3e615",
+            "f352f5ec-8823-4b1e-aa27-4e14b549ce8c",
+            "30a7461d-cc8c-409c-bc34-306921e39e97",
+            "02bd9879-05a1-42d5-b54d-49db6a1a4708",
+            "4ef2513d-8fae-4d63-ac29-2f020911be41"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 129841,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/report_2025-10-25T04-53-54-606Z/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

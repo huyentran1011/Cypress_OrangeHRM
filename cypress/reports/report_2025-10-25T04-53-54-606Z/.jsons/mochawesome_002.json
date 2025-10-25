@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-10-25T04:56:29.196Z",
+    "end": "2025-10-25T04:56:46.326Z",
+    "duration": 17130,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "479005a3-4d07-4f56-a98a-2a208a4240b1",
+      "title": "",
+      "fullFile": "cypress/e2e/demo_cypressStudio.cy.ts",
+      "file": "cypress/e2e/demo_cypressStudio.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "138b9db1-cd5a-4f08-a7a4-6bc02b03f48b",
+          "title": "Login and search employee",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and take update my account",
+              "fullTitle": "Login and search employee Login and take update my account",
+              "timedOut": null,
+              "duration": 8137,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/demo_cypressStudio.cy.ts\"\n}",
+              "code": "cy.visit('http://localhost:86/orangehrm5/web/index.php/auth/login');\ncy.get('#app [name=\"username\"]').click();\ncy.get('#app [name=\"username\"]').type('anna1011');\ncy.get('#app [name=\"password\"]').click();\ncy.get('#app [name=\"password\"]').clear();\ncy.get('#app [name=\"password\"]').type('Annatran1011@X');\ncy.get('#app button.oxd-button').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/pim/viewMyDetails\"]').click();\ncy.get('#app [name=\"lastName\"]').click();\ncy.get('#app [name=\"lastName\"]').clear();\ncy.get('#app [name=\"lastName\"]').type('Tran');\ncy.get('#app div:nth-child(2) > div:nth-child(2) > div.oxd-radio-wrapper > label').click();\ncy.get('#app input[value=\"2\"]').check();\ncy.get('#app button.orangehrm-left-space').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/dashboard/index\"] span.oxd-text').click();\ncy.get('#app button.orangehrm-attendance-card-action i.oxd-icon').click();\ncy.get('#app i.bi-calendar').click();\ncy.get('#app textarea.oxd-textarea').click();\ncy.get('#app textarea.oxd-textarea').type('Testing');\ncy.get('#app button.oxd-button').click();\ncy.get('#app textarea.oxd-textarea').click();\ncy.get('#app textarea.oxd-textarea').click();\ncy.get('#app textarea.oxd-textarea').type('Time out');\ncy.get('#app button.oxd-button').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/leave/viewLeaveModule\"]').click();",
+              "err": {},
+              "uuid": "ffee5134-eded-4bba-9309-78395ba2f74a",
+              "parentUUID": "138b9db1-cd5a-4f08-a7a4-6bc02b03f48b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login, search employee and edit infomation",
+              "fullTitle": "Login and search employee Login, search employee and edit infomation",
+              "timedOut": null,
+              "duration": 8409,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/demo_cypressStudio.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/demo_cypressStudio.cy.ts/Login and search employee -- Login, search employee and edit infomation (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('http://localhost:86/orangehrm5/web/index.php/auth/login');\ncy.get('#app [name=\"username\"]').click();\ncy.get('#app [name=\"username\"]').type('automationfc');\ncy.get('#app [name=\"password\"]').click();\ncy.get('#app [name=\"password\"]').type('orangehrm5@X');\ncy.get('#app button.oxd-button').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/pim/viewPimModule\"]').click();\ncy.get('#app div:nth-child(6) div.oxd-select-text--after i.oxd-icon').click();\ncy.get('#app button.orangehrm-left-space').click();\ncy.get('#app div:nth-child(1) > div.oxd-table-row > div:nth-child(9) > div.oxd-table-cell-actions > button:nth-child(2) > i.oxd-icon').click();\ncy.get('#app div:nth-child(2) > div.oxd-input-group > div:nth-child(2) > div.oxd-date-wrapper > div.oxd-date-input > i.oxd-icon').click();\ncy.get('#app input.oxd-input--focus').type('2028-10-10');\ncy.get('#app form.oxd-form').click();\ncy.get('#app div:nth-child(1) > div.oxd-input-group > div:nth-child(2) > div.oxd-select-wrapper > div.oxd-select-text > div.oxd-select-text--after > i.oxd-icon').click();\ncy.get('#app div:nth-child(2) > div.oxd-input-group > div:nth-child(2) > div.oxd-select-wrapper > div.oxd-select-text > div.oxd-select-text--after > i.oxd-icon').click();\ncy.get('#app div:nth-child(2) > div.oxd-input-group > div:nth-child(2) > div.oxd-select-wrapper > div.oxd-select-text > div.oxd-select-text--after > i.oxd-icon').click();\ncy.get('#app div:nth-child(1) > div.oxd-input-group > div:nth-child(2) > div.oxd-date-wrapper > div.oxd-date-input > input.oxd-input').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('1988-09-09');\ncy.get('#app form.oxd-form > div:nth-child(5) > div:nth-child(1)').click();\ncy.get('#app div:nth-child(2) > div:nth-child(2) > div.oxd-radio-wrapper > label').click();\ncy.get('#app input[value=\"2\"]').check();\ncy.get('#app button.orangehrm-left-space').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/pim/contactDetails/empNumber/51\"]').click();\ncy.get('#app div:nth-child(5) input.oxd-input').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('32505');\ncy.get('#app input.oxd-input--focus').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('christina123@gmail.com');\ncy.get('#app button.orangehrm-left-space').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/pim/viewEmergencyContacts/empNumber/51\"]').click();\ncy.get('#app div:nth-child(1) > div.orangehrm-action-header > button.oxd-button').click();\ncy.get('#app input.oxd-input--focus').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('Lisa');\ncy.get('#app input.oxd-input--focus').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('Mother');\ncy.get('#app input.oxd-input--focus').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('(899) 578 8907');\ncy.get('#app button.orangehrm-left-space').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/pim/viewDependents/empNumber/51\"]').click();\ncy.get('#app div:nth-child(1) > div.orangehrm-action-header > button.oxd-button').click();\ncy.get('#app input.oxd-input--focus').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('Lisa');\ncy.get('#app i.bi-caret-up-fill').click();\ncy.get('#app div:nth-child(3) > div.oxd-input-group > div:nth-child(2) > input.oxd-input').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('Mother');\ncy.get('#app input.oxd-input--focus').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('1959-07-09');\ncy.get('#app div:nth-child(2) > div.orangehrm-full-width-grid').click();\ncy.get('#app div.orangehrm-edit-employee-content > div:nth-child(1)').click();\ncy.get('#app button.orangehrm-left-space').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/pim/viewJobDetails/empNumber/51\"]').click();\ncy.get('#app div:nth-child(5) i.oxd-icon').click();\ncy.get('#app button.orangehrm-left-space').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/pim/viewSalaryList/empNumber/51\"]').click();\ncy.get('#app div:nth-child(1) > div.orangehrm-action-header > button.oxd-button').click();\ncy.get('#app input.oxd-input--focus').click();\ncy.get('#app input.oxd-input--focus').clear();\ncy.get('#app input.oxd-input--focus').type('6000');\ncy.get('#app i.bi-caret-up-fill').click();\ncy.get('#app div:nth-child(3) > div.oxd-input-group > div:nth-child(2) > div.oxd-select-wrapper > div.oxd-select-text > div.oxd-select-text-input').click();\ncy.get('#app div:nth-child(4) div.oxd-select-text--after i.oxd-icon').click();\ncy.get('#app button.orangehrm-left-space').click();\ncy.get('#app button.oxd-button--ghost').click();\ncy.get('#app span.oxd-userdropdown-tab').click();\ncy.get('#app a[href=\"/orangehrm5/web/index.php/auth/logout\"]').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<label class=\"\" data-v-3d0015de=\"\">...</label>`\n\nis being covered by another element:\n\n`<div role=\"listbox\" class=\"oxd-select-dropdown --positon-bottom\" loading=\"false\" data-v-768a7d72=\"\" data-v-15ec1d6f=\"\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<label class=\"\" data-v-3d0015de=\"\">...</label>`\n\nis being covered by another element:\n\n`<div role=\"listbox\" class=\"oxd-select-dropdown --positon-bottom\" loading=\"false\" data-v-768a7d72=\"\" data-v-15ec1d6f=\"\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (http://localhost:86/__cypress/runner/cypress_runner.js:114261:68)\n    at ensureDescendents (http://localhost:86/__cypress/runner/cypress_runner.js:114312:5)\n    at ensureDescendentsAndScroll (http://localhost:86/__cypress/runner/cypress_runner.js:114318:14)\n    at ensureElIsNotCovered (http://localhost:86/__cypress/runner/cypress_runner.js:114449:5)\n    at runAllChecks (http://localhost:86/__cypress/runner/cypress_runner.js:114648:52)\n    at retryActionability (http://localhost:86/__cypress/runner/cypress_runner.js:114685:16)\n    at tryCatcher (http://localhost:86/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (http://localhost:86/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (http://localhost:86/__cypress/runner/cypress_runner.js:147260:68)\n    at <unknown> (http://localhost:86/__cypress/runner/cypress_runner.js:147201:14)\n    at tryCatcher (http://localhost:86/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:86/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:86/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:86/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:86/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (http://localhost:86/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (http://localhost:86/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at Object.proxyGetter [as get] (http://localhost:86/__cypress/runner/cypress_runner.js:80494:22)\n    at exists (http://localhost:86/__cypress/runner/cypress_runner.js:146448:26)\n    at elExists (http://localhost:86/__cypress/runner/cypress_runner.js:146463:10)\n    at ensureExistence (http://localhost:86/__cypress/runner/cypress_runner.js:146644:22)\n    at onFailFn (http://localhost:86/__cypress/runner/cypress_runner.js:146673:53)",
+                "diff": null
+              },
+              "uuid": "7b344337-f89b-47a1-9192-e89b96105bd8",
+              "parentUUID": "138b9db1-cd5a-4f08-a7a4-6bc02b03f48b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ffee5134-eded-4bba-9309-78395ba2f74a"
+          ],
+          "failures": [
+            "7b344337-f89b-47a1-9192-e89b96105bd8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16546,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/report_2025-10-25T04-53-54-606Z/.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}
